@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ServletChat2@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>12.2</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="HibernateTest">
+      <ObjectId>74117</ObjectId>
+      <StateNumber>1414</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="JavaJuniorTest">
+      <ObjectId>57431</ObjectId>
+      <StateNumber>1172</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="JuniorTest">
+      <ObjectId>57344</ObjectId>
+      <StateNumber>1054</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="ServletChat">
+      <ObjectId>90202</ObjectId>
+      <StateNumber>2004</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>2005</IntrospectionStateNumber>
+    </database>
+    <database id="6" parent="1" name="ServletChat1">
+      <ObjectId>90200</ObjectId>
+      <StateNumber>1998</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>2002</IntrospectionStateNumber>
+    </database>
+    <database id="7" parent="1" name="ServletChat2">
+      <ObjectId>90201</ObjectId>
+      <StateNumber>2001</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>2007</IntrospectionStateNumber>
+      <Current>1</Current>
+    </database>
+    <database id="8" parent="1" name="TomCatTestData">
+      <ObjectId>49152</ObjectId>
+      <StateNumber>1044</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="9" parent="1" name="backupTestRecover">
+      <ObjectId>57377</ObjectId>
+      <StateNumber>1089</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="10" parent="1" name="copper2">
+      <ObjectId>32768</ObjectId>
+      <StateNumber>543</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="11" parent="1" name="floyd">
+      <ObjectId>41099</ObjectId>
+      <StateNumber>1043</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="12" parent="1" name="postgres">
+      <ObjectId>13318</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>485</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="13" parent="1" name="sweater3">
+      <ObjectId>41067</ObjectId>
+      <StateNumber>1029</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="14" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="17" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="18" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="19" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="20" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="21" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="22" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+  </database-model>
+</dataSource>

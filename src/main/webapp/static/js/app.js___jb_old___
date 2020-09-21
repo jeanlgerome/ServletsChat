@@ -1,0 +1,75 @@
+var userName = null;
+var websocket = null;
+var chatId = null;
+
+function init() {
+    if ("WebSocket" in window) {
+        userName = document.getElementById("chatScript").getAttribute("data-login");
+        chatId = document.getElementById("chatScript").getAttribute("data-chatId");
+        websocket = new WebSocket('ws://localhost:8080/my-app/chat/' +chatId+"/"+ userName);
+        websocket.onopen = function (data) {
+            document.getElementById("main").style.display = "block";
+        };
+
+        websocket.onmessage = function (data) {
+            setMessage(JSON.parse(data.data));
+        };
+
+        websocket.onerror = function (e) {
+            alert('An error occured, closing application');
+
+            cleanUp();
+        };
+
+        websocket.onclose = function (data) {
+            alert("onClose js");
+            cleanUp();
+
+            var reason = (data.reason && data.reason !== null) ? data.reason : 'Goodbye';
+            alert(reason);
+        };
+    } else {
+        alert("Websockets not supported");
+    }
+}
+
+function cleanUp() {
+    document.getElementById("main").style.display = "none";
+
+    userName = null;
+    websocket = null;
+}
+
+function sendMessage() {
+    var messageContent = document.getElementById("message").value;
+    var message = buildMessage(userName, messageContent);
+
+    document.getElementById("message").value = '';
+
+    setMessage(message);
+    websocket.send(JSON.stringify(message));
+}
+
+function buildMessage(userName, content) {
+    return {
+        username: userName,
+        content: content
+    };
+}
+
+function setMessage(msg) {
+    var currentHTML = document.getElementById('scrolling-messages').innerHTML;
+    var newElem;
+
+    if (msg.username === userName) {
+        newElem = '<p style="background: #ebebe0;"><span>' + msg.username
+            + ' : ' + msg.message + '</span></p>';
+    } else {
+        newElem = '<p><span>' + msg.username + ' : ' + msg.content
+            + '</span></p>';
+    }
+
+    document.getElementById('scrolling-messages').innerHTML = currentHTML
+        + newElem;
+}
+
